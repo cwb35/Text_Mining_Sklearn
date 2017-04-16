@@ -1,0 +1,7 @@
+#### Requirements for Text_Mining_Lecture.ipynb ####
+#
+pandas
+sklearn
+nltk
+matplotlib
+#
