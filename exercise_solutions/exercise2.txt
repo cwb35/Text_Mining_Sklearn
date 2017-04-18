@@ -1,0 +1,8 @@
+max_df = 1
+cv = CountVectorizer(max_df=max_df)
+train_dtm = cv.fit_transform(df['Text'])
+print("The shape of the dtm with {} max_df: {}".format(max_df, train_dtm.shape))
+
+min_df = 3
+train_dtm = cv.fit_transform(df['Text'])
+print("The shape of the dtm with {} min_df: {}".format(min_df, train_dtm.shape))

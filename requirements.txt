@@ -4,4 +4,6 @@ pandas
 sklearn
 nltk
 matplotlib
+ipywidgets
+jupyter_contrib_nbextensions
 #

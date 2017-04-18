@@ -1,0 +1,6 @@
+tfidf = TfidfTransformer()
+X_train_dtm = tfidf.fit_transform(X_train_dtm)
+X_test_dtm = tfidf.transform(X_test_dtm)
+clf.fit(X_train_dtm, y_train)
+y_pred = clf.predict(X_test_dtm)
+evaluate_model(y_test, y_pred)
