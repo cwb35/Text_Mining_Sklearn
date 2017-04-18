@@ -1,3 +1,0 @@
-new_dtm = vect.transform(new_str)
-print(dtm_todf(new_dtm, vect))
-print(vect.token_pattern)

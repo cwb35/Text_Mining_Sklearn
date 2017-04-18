@@ -1,18 +1,6 @@
-cv2 = CountVectorizer(ngram_range=(2,2))
-tfidf2 = TfidfTransformer()
-clf2 = SGDClassifier()
-
-X_train_dtm2 = cv.fit_transform(X_train2)
-X_test_dtm2 = cv.transform(X_test2)
-
-X_train_dtm2 = tfidf.fit_transform(X_train_dtm2)
-X_test_dtm2 = tfidf.transform(X_test_dtm2)
-
-clf.fit(X_train_dtm2, y_train)
-
-coef_df2 = get_coef_df(clf2, cv2)
-
-print('Positive Coefficients: \n')
-get_most_important(coef_df2, 5, ascending=False)
-print('\nNegative Coefficients: \n')
-get_most_important(coef_df2, 5, ascending=True)
+tfidf = TfidfTransformer()
+X_train_dtm = tfidf.fit_transform(X_train_dtm)
+X_test_dtm = tfidf.transform(X_test_dtm)
+clf.fit(X_train_dtm, y_train)
+y_pred = clf.predict(X_test_dtm)
+evaluate_model(y_test, y_pred)
